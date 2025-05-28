@@ -1,13 +1,13 @@
 ```mermaid
 flowchart TD
-    Start([Start]) --> Init[Initial game: Generate random number between 1-100]
-    Init --> AskUser[Asks user for a guess]
-    AskUser --> Validate[Is input a number and within range?]
-    Validate -- No --> ErrorMsg[Show error and reask]
+    Start([Start]) --> Initial[Initial game: Generate random number between 1-100]
+    Initial --> AskUser[Asks user for a guess]
+    AskUser --> Validate[Is input a number and in the range?]
+    Validate -- No --> ErrorMsg[Show error message and reask]
     ErrorMsg --> AskUser
-    Validate -- Yes --> Compare[Compare guess with random number]
-    Compare -- Too Low --> LowMsg[Show 'Too low'] --> AskUser
-    Compare -- Too High --> HighMsg[Show 'Too high'] --> AskUser
+    Validate -- Yes --> Compare[Compare guess with the random number]
+    Compare -- Too Low --> LowMsg[Show 'Guess is too low'] --> AskUser
+    Compare -- Too High --> HighMsg[Show 'Guess is too high'] --> AskUser
     Compare -- Correct --> WinMsg[Show 'Correct! You win!']
     WinMsg --> End([End])
 ```
@@ -20,5 +20,5 @@ flowchart TD
 6. **Compare** - The game will compare the randomly generated number from the computer and the number guess by the player and checks if it lower, higher, or the same.
 7. **Too Low** - A message saying, "Guess is too low" will pop-up
 8. **Too High** - A message saying, "Guess is too high" will pop-up
-9. **Correct** - If the guess matches the computer's number a message saying "You Win!" will pop-up and the game ends.
+9. **Correct** - If the guess matches the computer's number a message saying "Correct! You Win!" will pop-up and the game ends.
 10. **End** - The game stops after the correct number is guessed. 
