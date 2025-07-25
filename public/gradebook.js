@@ -10,8 +10,5 @@ function populateGradebook(data) {
     console.log("Populating gradebook with data:", data);
 }
 
-// TODO REMOVE THIS
-// Call the stubs to demonstate the workflow
-const gradeData = fetchGradeData();
-populateGradebook(gradeData);
-// END REMOVE
+fetchGradeData();
+
