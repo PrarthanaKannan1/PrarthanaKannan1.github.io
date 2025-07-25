@@ -1,4 +1,3 @@
-// TODO: Fetch data from the PostgreSQL database (to be implemented later)
 function fetchGradeData() {
     // This function will query the PostgreSQL database and return grade data
     console.log("Fetching grade data...");
@@ -34,7 +33,7 @@ function populateGradebook(data) {
             columns.name = document.createElement('td'); // The first column's table data will be the name
             columns.name.appendChild(
                 // Concatenate the full name:  "LAST_NAME, FIRST_NAME"
-                document.createTextNode(assignment.LAST_NAME + ", " + assignment.FIRST_NAME)
+                document.createTextNode(assignment.last_name + ", " + assignment.first_name)
             );
             columns.grade = document.createElement('td'); // second column will be the grade
             columns.grade.appendChild(
